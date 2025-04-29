@@ -1,0 +1,116 @@
+/* Base container styling */
+.landing-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #121212; /* Dark background for the dark theme */
+  overflow: hidden;
+}
+
+/* Full-screen GIF styling */
+.landing-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8; /* Add slight transparency for better text contrast */
+}
+
+/* Centered content styling */
+.content-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #e0e0e0; /* Light text color for dark theme */
+  text-align: center; /* Center text */
+  max-width: 90%; /* Limit width for mobile */
+}
+
+/* Tagline styling */
+.tagline {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  overflow-wrap: break-word;
+  color: #ffffff; /* Pure white for tagline to stand out */
+}
+
+/* Responsive adjustments for different screen sizes */
+@media (max-width: 768px) {
+  .tagline {
+    font-size: 2rem; /* Reduce font size on smaller screens */
+  }
+  .button-container {
+    flex-direction: column; /* Stack buttons on small screens */
+    align-items: center;
+  }
+}
+
+/* Button container styling */
+.button-container {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Shared button styling */
+.btn, .create-project-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0; /* No rounded edges */
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Primary button styling */
+.btn {
+  background: linear-gradient(45deg, #444444, #222222);
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #222222, #444444);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid white; /* Light white border on hover */
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Create Project button styling */
+.create-project-btn {
+  background: linear-gradient(45deg, #00c853, #009624);
+  color: white;
+}
+
+.create-project-btn:hover {
+  background: linear-gradient(45deg, #009624, #00c853);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 200, 83, 0.4);
+  border: 1px solid white; /* Light white border on hover */
+}
+
+.create-project-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 10px rgba(0, 200, 83, 0.2);
+}
+
+/* Additional responsive styles */
+@media (max-width: 480px) {
+  .tagline {
+    font-size: 1.5rem; /* Smaller font on extra small screens */
+  }
+  .btn, .create-project-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem; /* Adjust padding */
+  }
+}

@@ -1,0 +1,115 @@
+/* Ensures that the footer sticks to the bottom when content is short */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content container takes up remaining space */
+body > #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Content area flexes to allow footer at the bottom */
+body > #root > div {
+    flex: 1;
+}
+
+/* Footer styling */
+.site-footer {
+    background: linear-gradient(135deg, black, #1c2833);
+    color: #ecf0f1;
+    padding: 50px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.site-footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+.site-footer-about,
+.site-footer-links,
+.site-footer-social {
+    flex: 1;
+    margin: 20px 10px;
+    text-align: center;
+}
+.site-footer-title {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    color: #4a90e2;
+    font-weight: bold;
+}
+.site-footer-text, .site-footer-links a, .site-footer-social a {
+    font-size: 1rem;
+    color: #bdc3c7;
+    text-align: center;
+}
+.site-footer-links ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+.site-footer-links li {
+    margin: 8px 0;
+}
+.site-footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.site-footer-links a:hover {
+    color: #4a90e2;
+}
+.site-footer-social a {
+    margin: 0 15px;
+    color: #bdc3c7;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+.site-footer-social a:hover {
+    color: #4a90e2;
+}
+.site-footer-bottom {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    color: #bdc3c7;
+}
+
+@media (min-width: 768px) {
+    .site-footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .site-footer-about,
+    .site-footer-links,
+    .site-footer-social {
+        align-items: center;
+        text-align: center;
+        margin: 0 20px;
+    }
+}
+
+.site-footer-social a {
+    margin: 0 15px;
+    color: #bdc3c7;
+    font-size: 1.5rem; /* Adjust icon size */
+    transition: color 0.3s ease;
+}
+
+.site-footer-social a:hover {
+    color: #4a90e2; /* Change color on hover */
+}
+
+

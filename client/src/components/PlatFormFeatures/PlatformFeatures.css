@@ -1,0 +1,68 @@
+.platform-features {
+    padding: 60px 20px;
+    background: #f0f4f8; /* Same background as HowItWorks */
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw + 50%); /* Center the full-width background */
+    margin-top: 0; /* Remove top margin to prevent divider effect */
+    border-radius: 0; /* Remove border radius to blend with HowItWorks */
+}
+
+.platform-features h2 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-weight: bold;
+    text-align: center;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features-text {
+    max-width: 600px;
+}
+
+.platform-features ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.platform-features li {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.features-image {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.platform-image {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .platform-features h2 {
+        font-size: 2.2rem;
+    }
+}
